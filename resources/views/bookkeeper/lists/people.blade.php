@@ -1,3 +1,7 @@
+@section('actions')
+    @include('partials.bulk', ['key' => 'people'])
+@endsection
+
 @extends('lists.base_edit')
 <?php $_withForm = false; $contentsListModifier = 'content-list-container--separated'; ?>
 

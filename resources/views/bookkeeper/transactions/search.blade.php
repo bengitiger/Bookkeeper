@@ -15,7 +15,7 @@
     <th class="content-list__cell content-list__cell--head">
         {{ uppercase(trans('validation.attributes.name')) }}
     </th>
-    <th class="content-list__cell content-list__cell--head content-list__cell--secondary">
+    <th class="content-list__cell content-list__cell--head">
         {!! uppercase(trans('validation.attributes.amount')) !!}
     </th>
     <th class="content-list__cell content-list__cell--head content-list__cell--secondary">

@@ -13,7 +13,11 @@ $currentRoute = 'bookkeeper.overview';
 @endsection
 
 @section('content')
-    @include('overview.chart')
+    @if($statistics)
+        @include('overview.chart')
+    @else
+        <div class="content-list__no-results">{{ trans('transactions.no_transactions') }}</div>
+    @endif
 @endsection
 
 @include('transactions.create')

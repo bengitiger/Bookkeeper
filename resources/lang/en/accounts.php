@@ -18,4 +18,6 @@ return [
     'no_accounts' => 'No accounts were found.',
     'balance' => 'Balance',
 
+    'default_account' => 'Default Account',
+
 ];

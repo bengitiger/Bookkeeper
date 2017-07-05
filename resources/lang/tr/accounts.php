@@ -18,4 +18,6 @@ return [
     'no_accounts' => 'Hesap bulunamadı.',
     'balance' => 'Bakiye',
 
+    'default_account' => 'Öntanımlı Hesap',
+
 ];

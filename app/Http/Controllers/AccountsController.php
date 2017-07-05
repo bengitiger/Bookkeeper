@@ -53,6 +53,7 @@ class AccountsController extends BookkeeperController {
         $end = Carbon::now()->endOfMonth();
 
         $transactions = $account->transactions()
+            ->whereExclude(0)
             ->whereReceived(1)
             ->whereBetween('created_at', [$start, $end])
             ->get();

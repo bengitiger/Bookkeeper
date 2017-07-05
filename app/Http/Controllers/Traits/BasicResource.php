@@ -123,7 +123,7 @@ trait BasicResource {
     {
         extract($this->getResourceNames());
 
-        $results = $modelPath::search($request->input('q'), 20, true)
+        $results = $modelPath::search($request->input('q'), null, true)
             ->groupBy('id')->get();
 
         return $this->compileView($resourceMultiple . '.search', [$resourceMultiple => $results]);

@@ -42,6 +42,8 @@
     width: 45em
     height: 34em
     padding-bottom: 4em
+    @media screen and (max-width: $thresholdMicro)
+        padding-bottom: 3.25em
 
     @media screen and (max-width: 45em)
         width: 100%
@@ -71,9 +73,11 @@
             width: 100%
             padding: 0
             display: block
+            margin-bottom: 1.5em
 
     &__received
         margin-left: -0.625em
+        margin-right: 1.5em
 
     &__loader
         +position(absolute, 0 null null 0)

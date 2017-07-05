@@ -28,5 +28,6 @@ return [
     'add_income' => 'Add Income',
     'add_expense' => 'Add Expense',
     'received' => 'Received',
+    'exclude' => 'Exclude',
     'error_saving' => 'Please fill all required fields.',
 ];

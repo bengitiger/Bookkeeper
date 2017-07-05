@@ -54,6 +54,7 @@ class TagsController extends BookkeeperController {
         $end = Carbon::now()->endOfMonth();
 
         $transactions = $tag->transactions()
+            ->whereExclude(0)
             ->whereReceived(1)
             ->whereBetween('created_at', [$start, $end])
             ->get();
@@ -72,7 +73,7 @@ class TagsController extends BookkeeperController {
      */
     public function searchJson(Request $request)
     {
-        return Tag::search($request->input('q'), 20, true)
+        return Tag::search($request->input('q'), null, true)
             ->groupBy('id')->limit(10)->get()
             ->pluck('name', 'id')->toArray();
     }

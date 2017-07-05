@@ -6,7 +6,7 @@
         <td class="content-list__cell">
             {!! link_to_route('bookkeeper.transactions.edit', $transaction->name, $transaction->getKey()) !!}
         </td>
-        <td class="content-list__cell content-list__cell--secondary">
+        <td class="content-list__cell">
             {{ $transaction->presentAmount() }}
         </td>
         <td class="content-list__cell content-list__cell--secondary">

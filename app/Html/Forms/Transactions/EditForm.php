@@ -33,6 +33,7 @@ class EditForm extends Form {
             'rules' => 'required'
         ]);
         $this->add('received', 'checkbox');
+        $this->add('exclude', 'checkbox');
         $this->add('notes', 'textarea');
     }
 

@@ -3,6 +3,7 @@
 namespace Bookkeeper\Http\Controllers;
 
 
+use Bookkeeper\Finance\Account;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\DB;
@@ -145,6 +146,12 @@ class InstallerController extends Controller {
 
         Artisan::call('route:cache');
         Artisan::call('optimize', ['--force' => true]);
+
+        // Creating a default account so that it does not fail
+        Account::create([
+            'name' => trans('accounts.default_account'),
+            'currency' => $request->get('default_currency')
+        ]);
 
         return redirect()->route('install-complete');
     }

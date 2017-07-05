@@ -19,9 +19,14 @@
         &--left
             float: left
             margin-right: 1em
+            @media screen and (max-width: $thresholdMicro)
+                margin-right: 0.5em
+
         &--right
             float: right
             margin-left: 1em
+            @media screen and (max-width: $thresholdMicro)
+                margin-left: 0.5em
 
         @media screen and (max-width: $thresholdCollapse)
             &--secondary
@@ -55,6 +60,8 @@
 
     &__search
         width: 14em
+        @media screen and (max-width: $thresholdMicro)
+            width: 12em
 
     &__select
         margin-bottom: 0

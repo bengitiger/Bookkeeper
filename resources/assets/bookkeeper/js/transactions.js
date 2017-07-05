@@ -86,6 +86,7 @@ $(document).ready(function () {
         transactionAccount = $('#t_account_id'),
         transactionDate = $('#t_date'),
         transactionReceived = $('input[name="t_received"]'),
+        transactionExclude = $('input[name="t_exclude"]'),
         transactionTags = $('#t_tags'),
         transactionNotes = $('#t_notes');
 
@@ -102,6 +103,7 @@ $(document).ready(function () {
         amountField.flush();
         transactionDate.val(new Date().toJSON().slice(0,10));
         transactionReceived.prop('checked', true);
+        transactionExclude.prop('checked', false);
         tags.flush();
         transactionNotes.val('');
     }
@@ -115,6 +117,7 @@ $(document).ready(function () {
             'account_id': transactionAccount.val(),
             'created_at': transactionDate.val(),
             'received': transactionReceived.is(':checked') ? 1 : 0,
+            'exclude': transactionExclude.is(':checked') ? 1 : 0,
             'tags': transactionTags.val(),
             'notes': transactionNotes.val()
         }

@@ -20,6 +20,7 @@ class OverviewController extends BookkeeperController {
         $end = Carbon::now()->endOfMonth();
 
         $transactions = Transaction::whereReceived(1)
+            ->whereExclude(0)
             ->whereBetween('created_at', [$start, $end])
             ->get();
 

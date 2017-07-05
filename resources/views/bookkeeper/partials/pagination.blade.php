@@ -1,3 +1,7 @@
+@php
+    $paginator->appends(request()->only(['f']));
+@endphp
+
 <div class="pagination-container">
     @if ($paginator->lastPage() > 1)
     <div class="pagination {{ $paginationModifier or '' }}">

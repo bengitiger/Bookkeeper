@@ -47,6 +47,14 @@
                                     <i class="form-group__checkbox-icon icon-cancel button__icon button__icon--right"> <span>{{ uppercase(trans('transactions.received')) }}</span></i><i class="form-group__checkbox-icon icon-confirm button__icon button__icon--right"> <span>{{ uppercase(trans('transactions.received')) }}</span></i>
                                 </span>
                             </label>
+
+                            <label class="form-group__checkbox transaction-modal__received">
+                                {!! Form::checkbox('t_exclude', 1, false) !!}
+                                <span>
+                                    <i class="form-group__checkbox-icon icon-cancel button__icon button__icon--right"> <span>{{ uppercase(trans('transactions.exclude')) }}</span></i><i class="form-group__checkbox-icon icon-confirm button__icon button__icon--right"> <span>{{ uppercase(trans('transactions.exclude')) }}</span></i>
+                                </span>
+                            </label>
+
                         </div><div class="transaction-modal__column transaction-modal__column--meta">
                             <div class="form-section"
                                  id="transactionTags"
@@ -56,7 +64,7 @@
 
                                 <h4 class="form-section__heading">{{ uppercase(trans('tags.title')) }}</h4>
                                 <ul class="tags-list tags-list--compact">
-                                    
+
                                 </ul>
 
 

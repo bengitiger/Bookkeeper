@@ -28,5 +28,6 @@ return [
     'add_income' => 'Gelir Ekle',
     'add_expense' => 'Gider Ekle',
     'received' => 'Alındı',
+    'exclude' => 'Hariç Tut',
     'error_saving' => 'Lütfen tüm gerekli alanları doldurun.',
 ];
